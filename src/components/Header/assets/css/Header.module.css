@@ -1,0 +1,46 @@
+
+.header {
+  width:100%;
+  padding: 12vh 12vw 10vh 10vw;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+  list-style-type: none;
+}
+
+.navbar ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: hsl(240, 100%, 5%);
+}
+
+.navbar ul li a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.navbar-option-enter {
+  opacity: 0;
+}
+.navbar-option-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.navbar-option-exit {
+  opacity: 1;
+}
+.navbar-option-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
