@@ -1,7 +1,6 @@
 
 .header {
   width:100%;
-  padding: 12vh 12vw 10vh 13vw;
 }
 
 .navbar {
@@ -16,8 +15,15 @@
 }
 
 .navbar ul li {
-  margin: 0 20px;
   list-style-type: none;
+}
+
+.navbar ul li:not(:last-child) {
+  margin: 0 20px;
+}
+
+.navbar ul li:last-child {
+  margin-left: 20px;
 }
 
 .navbar ul li a {

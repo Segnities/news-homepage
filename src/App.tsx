@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 
 import styles from './App.module.css'
 import { nanoid } from 'nanoid';
+import Content from './components/Content/Content';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className={styles["App"]}>
       <Header menuOptions={menuOptions}/>
+      <Content/>
     </div>
   )
 }
