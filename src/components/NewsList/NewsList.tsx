@@ -15,7 +15,7 @@ const NewsList = (props: newsListProps) => {
       <article className={styles["new-news"]}>
         <h2>New</h2>
         {props.list.map((item) => (
-          <NewsItem />
+          <NewsItem key={item.id}/>
         ))}
       </article>
     );

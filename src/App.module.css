@@ -2,3 +2,9 @@
   width: 100%;
   padding: 12vh 15vw 10vh 11vw;
 }
+
+@media screen and (max-device-width: 1440px) {
+  .App {
+    padding: 6vh 8vw 5vh 6vw;
+  }
+}

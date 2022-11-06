@@ -18,3 +18,17 @@
 .news-intro-image {
   width: 100%;
 }
+
+.top-news {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 75px;
+}
+
+@media screen and (max-device-width: 1440px) {
+  .top-news {
+    width: 100%;
+  }
+}
