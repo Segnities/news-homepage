@@ -43,9 +43,23 @@
   letter-spacing: 5px;
 }
 
-@media screen and (max-device-width: 940px) {
+@media screen and (max-width: 1150px) {
   .news-intro h1 {
-    font-size: 3.2em;
+    font-size: 3.29em;
+  }
+}
+
+@media screen and (max-width: 974px) {
+  .news-intro {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .news-intro-description > button {
+    width: 100%;
+  }
+
+  .news-intro h1 {
+    font-size: 2.8em;
     text-align: center;
   }
 
@@ -70,7 +84,6 @@
   .news-intro-description > button {
     padding: 15px 0;
   }
-
 }
 
 @media screen and (max-device-width: 835px) {

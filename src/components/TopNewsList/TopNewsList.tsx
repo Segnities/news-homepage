@@ -22,7 +22,7 @@ const TopNewsList = (props: topNewsProps) => {
             <img src={item.image} alt="retro-pcs-image" />
           </div>
           <section className={styles["top-news-description"]}>
-            <p className={styles["top-news-rating"]}>{item.rating > 10 ? item.rating : `0${item.rating}`}</p>
+            <span className={styles["top-news-rating"]}>{item.rating > 10 ? item.rating : `0${item.rating}`}</span>
             <h4>
               <a
                 href="https://www.oxfordstudent.com/2020/05/08/why-spongebob-squarepants-is-quite-possibly-the-best-cartoon-ever/"

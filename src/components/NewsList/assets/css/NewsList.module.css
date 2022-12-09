@@ -35,3 +35,23 @@
 .new-news-item > * {
   margin: 15px 0;
 }
+
+@media screen and (max-width: 974px){
+  .new-news h2 {
+    font-size: 1.8em;
+  }
+
+  .new-news-item {
+    margin-top: 18px;
+  }
+
+  .new-news-item h3 {
+    font-size: 1em;
+  }
+
+  .new-news  .new-news-item > p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
