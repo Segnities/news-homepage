@@ -77,14 +77,26 @@ span.top-news-rating {
 
 @media screen and (max-width: 1150px) {
   span.top-news-rating {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .top-news-description {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .top-news-description > p {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .top-news-item {
+    flex-direction: row;
+  }
+
+  .top-news-description {
+    margin-left: 20px;
+    align-items: flex-start;
+    text-align: left;
   }
 }

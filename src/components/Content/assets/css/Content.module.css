@@ -27,3 +27,15 @@
   margin-top: 75px;
   grid-column-gap: 20px;
 }
+
+@media screen and (max-width: 620px) {
+  .news-content-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.5rem;
+  }
+  .top-news {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
