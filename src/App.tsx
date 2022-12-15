@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from "react";
 
 import Header from "./components/Header/Header";
+import Content from "./components/Content/Content";
+import HeaderMobileMenu from "./components/UI/HeaderMobileMenu/HeaderMobileMenu";
+import { MenuList } from "./components/Header/MenuList";
 
-import styles from './App.module.css'
-import { nanoid } from 'nanoid';
-import Content from './components/Content/Content';
+import styles from "./App.module.css";
+import { nanoid } from "nanoid";
 
 function App() {
+  const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(true);
 
   const menuOptions = [
     {
@@ -32,11 +35,21 @@ function App() {
   ];
 
   return (
-    <div className={styles["App"]}>
-      <Header menuOptions={menuOptions}/>
-      <Content/>
-    </div>
-  )
+    <>
+      <div className={styles["App"]}>
+        <HeaderMobileMenu
+          isOpen={isOpenBurgerMenu}
+          menuList={<MenuList menuOptions={menuOptions} />}
+        />
+        <Header
+          menuOptions={menuOptions}
+          isOpenBurgerMenu={isOpenBurgerMenu}
+          setIsOpenBurgerMenu={setIsOpenBurgerMenu}
+        />
+        <Content />
+      </div>
+    </>
+  );
 }
 
 export default App;

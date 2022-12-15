@@ -1,6 +1,5 @@
-
 .header {
-  width:100%;
+  width: 100%;
 }
 
 .navbar {
@@ -49,4 +48,30 @@
 .navbar-option-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-in;
+}
+
+.burger-menu {
+  display: none;
+}
+
+@media screen and (min-width: 651px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .navbar ul li a {
+    font-size: 13px;
+  }
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    z-index: 100;
+  }
+  .navbar ul{
+    display: none;
+  }
 }
