@@ -6,13 +6,17 @@ import OpenBurgerMenu from "./assets/img/icon-menu.svg";
 import CloseBurgerMenu from "./assets/img/icon-menu-close.svg";
 
 import styles from "./assets/css/Header.module.css";
+import { MenuList } from "./MenuList";
+import { MenuIcon } from "./MenuIcon";
+import HeaderMobileMenu from "../UI/HeaderMobileMenu/HeaderMobileMenu";
 
 interface headerProps {
   menuOptions: { id: string; title: string }[];
+  isOpenBurgerMenu:boolean;
+  setIsOpenBurgerMenu:(value:boolean)=>void;
 }
 
 const Header = (props: headerProps) => {
-  const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(true);
   return (
     <header className={styles["header"]}>
       <nav className={styles["navbar"]}>
@@ -24,21 +28,14 @@ const Header = (props: headerProps) => {
             onDragStart={(e) => e.preventDefault()}
           />
         </a>
-        <img
-          src={isOpenBurgerMenu ? OpenBurgerMenu : CloseBurgerMenu}
-          alt=""
-          className="burger-menu"
-          onClick={() => setIsOpenBurgerMenu(!isOpenBurgerMenu)}
+        <MenuIcon
+          isOpenBurgerMenu={props.isOpenBurgerMenu}
+          openBurgerMenu={OpenBurgerMenu}
+          closeBurgerMenu={CloseBurgerMenu}
+          setIsOpenBurgerMenu={props.setIsOpenBurgerMenu}
+          styles={styles["burger-menu"]}
         />
-        {isOpenBurgerMenu === false ? (
-          <ul>
-            {props.menuOptions.map((option) => (
-              <li key={option.id}>
-                <a href="https://duckduckgo.com">{option.title}</a>
-              </li>
-            ))}
-          </ul>
-        ) : null}
+        <MenuList menuOptions={props.menuOptions} />
       </nav>
     </header>
   );

@@ -100,3 +100,9 @@ span.top-news-rating {
     text-align: left;
   }
 }
+
+@media screen and (max-width: 340px) {
+  .top-news-description p {
+    font-size: 11px;
+  }
+}
