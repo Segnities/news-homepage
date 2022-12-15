@@ -52,6 +52,7 @@
 
 .burger-menu {
   display: none;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 651px) {

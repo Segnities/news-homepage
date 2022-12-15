@@ -13,7 +13,7 @@
 }
 
 .menu {
-  width: 55vw;
+  width: 60vw;
   min-height: 100vh;
   background-color: #fff;
   display: flex;
@@ -33,4 +33,11 @@
 .menu ul li a {
   text-decoration: none;
   color: hsl(240, 100%, 5%);
+}
+
+
+@media screen and (min-width: 621px) {
+  .wrapper {
+    display: none;
+  }
 }

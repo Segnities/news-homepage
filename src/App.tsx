@@ -9,7 +9,7 @@ import styles from "./App.module.css";
 import { nanoid } from "nanoid";
 
 function App() {
-  const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(true);
+  const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);
 
   const menuOptions = [
     {
@@ -35,7 +35,6 @@ function App() {
   ];
 
   return (
-    <>
       <div className={styles["App"]}>
         <HeaderMobileMenu
           isOpen={isOpenBurgerMenu}
@@ -48,7 +47,6 @@ function App() {
         />
         <Content />
       </div>
-    </>
   );
 }
 
